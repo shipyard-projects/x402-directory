@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/shipyard-projects/x402-directory/schema/listing.schema.json",
+  "title": "x402 Directory Listing",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "url",
+    "description",
+    "category",
+    "pricing",
+    "status",
+    "createdAt",
+    "updatedAt"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^x402_[a-z0-9_]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 80
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 280
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "ai-ml-apis",
+        "data-feeds",
+        "compute",
+        "storage",
+        "content",
+        "developer-tools",
+        "identity",
+        "other"
+      ]
+    },
+    "pricing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["amount", "currency", "unit", "network"],
+      "properties": {
+        "amount": {
+          "type": "string",
+          "pattern": "^[0-9]+(\\.[0-9]+)?$"
+        },
+        "currency": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 16
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 64
+        },
+        "network": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 32
+        },
+        "details": {
+          "type": "string",
+          "maxLength": 180
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["verified", "unverified"]
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lastCheckedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
