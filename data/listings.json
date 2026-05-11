@@ -1,0 +1,36 @@
+[
+  {
+    "id": "x402_weather_quote",
+    "name": "Weather Quote API",
+    "url": "https://weather-quote.example/x402",
+    "description": "Returns a paid current-weather summary for a requested city through an x402-protected HTTP endpoint.",
+    "category": "data-feeds",
+    "pricing": {
+      "amount": "0.001",
+      "currency": "USDC",
+      "unit": "request",
+      "network": "base",
+      "details": "Flat per-request price for JSON weather summaries."
+    },
+    "status": "unverified",
+    "createdAt": "2026-05-11T00:00:00.000Z",
+    "updatedAt": "2026-05-11T00:00:00.000Z"
+  },
+  {
+    "id": "x402_agent_icon",
+    "name": "Agent Icon Renderer",
+    "url": "https://agent-icon.example/render",
+    "description": "Generates a small paid PNG icon from a text prompt and returns the image URL after x402 payment.",
+    "category": "ai-ml-apis",
+    "pricing": {
+      "amount": "0.02",
+      "currency": "USDC",
+      "unit": "render",
+      "network": "base",
+      "details": "Per successful image render."
+    },
+    "status": "unverified",
+    "createdAt": "2026-05-11T00:00:00.000Z",
+    "updatedAt": "2026-05-11T00:00:00.000Z"
+  }
+]
