@@ -1,0 +1,20 @@
+{
+  "name": "x402-directory",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "start": "node dist/server.js",
+    "test": "vitest run src",
+    "typecheck": "tsc -b --pretty false"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.7"
+  }
+}
