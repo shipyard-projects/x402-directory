@@ -1,0 +1,18 @@
+{
+  "name": "Venture NL open-data",
+  "url": "https://api.pogo-tb.nl",
+  "openapi": "https://api.pogo-tb.nl/openapi.json",
+  "wellKnown": "https://api.pogo-tb.nl/.well-known/x402",
+  "network": "eip155:8453",
+  "asset": "USDC",
+  "payTo": "0xF375B89Bb5785386f5cbB63e815c924787AF79CF",
+  "facilitator": "https://facilitator.openx402.ai",
+  "description": "Dutch open-data pack for agents: RDW license plates + BAG addresses. Free previews; full payloads via x402.",
+  "endpoints": [
+    {"method": "GET", "path": "/v1/kenteken/{plate}/preview", "priceUsdc": "0", "paid": false},
+    {"method": "GET", "path": "/v1/kenteken/{plate}", "priceUsdc": "0.002", "paid": true},
+    {"method": "GET", "path": "/v1/adres/preview", "priceUsdc": "0", "paid": false},
+    {"method": "GET", "path": "/v1/adres", "priceUsdc": "0.002", "paid": true}
+  ],
+  "tags": ["netherlands", "rdw", "bag", "open-data", "x402"]
+}
