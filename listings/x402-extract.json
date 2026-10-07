@@ -1,0 +1,16 @@
+{
+  "name": "x402-extract",
+  "url": "https://completion-producers-conversion-reliability.trycloudflare.com",
+  "network": "eip155:8453",
+  "asset": "USDC",
+  "payTo": "0x4be4f0c79d398dD59d2611A07A9528f3480eA7e1",
+  "facilitator": "https://facilitator.xpay.sh",
+  "description": "Deterministic article extraction for agents: fetch a URL and get back cleaned title, meta description, markdown and plain text as JSON (Mozilla Readability, no LLM, no randomness). HTTP 402 micropayments per call.",
+  "endpoints": [
+    {"method": "GET", "path": "/health", "priceUsdc": "0", "paid": false},
+    {"method": "GET", "path": "/info", "priceUsdc": "0", "paid": false},
+    {"method": "GET", "path": "/v1/extract?url={url}", "priceUsdc": "0.005", "paid": true},
+    {"method": "POST", "path": "/v1/extract", "priceUsdc": "0.005", "paid": true}
+  ],
+  "tags": ["extract", "article", "readability", "markdown", "scraping", "text", "content", "x402"]
+}
