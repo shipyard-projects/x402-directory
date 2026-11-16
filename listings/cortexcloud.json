@@ -1,0 +1,31 @@
+{
+  "name": "CortexCloud",
+  "url": "https://api.cortexcloud.org",
+  "network": "eip155:8453",
+  "asset": "USDC",
+  "payTo": "0x5a0353bc9c75b893a9b5735d3e79f1bd988ea143",
+  "facilitator": "https://api.cdp.coinbase.com/platform/v2/x402",
+  "description": "Agent-native on-chain intelligence API: token prices, risk scoring, wallet intelligence, whale alerts, balances, transaction history, cross-chain comparison. Evidence-backed JSON with source attribution, checked_at timestamps, explicit missing-data indicators. Providers: Alchemy + CoinGecko. 19 paid routes ($0.004-$0.07/call) + 2 free. MCP gateway at /mcp with 19 tools (2 free).",
+  "endpoints": [
+    {"method": "GET", "path": "/health", "priceUsdc": "0", "paid": false},
+    {"method": "GET", "path": "/v1/capabilities", "priceUsdc": "0", "paid": false},
+    {"method": "POST", "path": "/v1/data/token-balances", "priceUsdc": "0.004", "paid": true},
+    {"method": "POST", "path": "/v1/data/token-price", "priceUsdc": "0.004", "paid": true},
+    {"method": "POST", "path": "/v1/data/nft-ownership", "priceUsdc": "0.004", "paid": true},
+    {"method": "POST", "path": "/v1/data/tx-history", "priceUsdc": "0.004", "paid": true},
+    {"method": "GET", "path": "/v1/data/gas-oracle", "priceUsdc": "0.004", "paid": true},
+    {"method": "GET", "path": "/v1/data/block", "priceUsdc": "0.004", "paid": true},
+    {"method": "POST", "path": "/v1/data/token-risk", "priceUsdc": "0.020", "paid": true},
+    {"method": "POST", "path": "/v1/data/wallet-intel", "priceUsdc": "0.006", "paid": true},
+    {"method": "POST", "path": "/v1/data/whale-alerts", "priceUsdc": "0.050", "paid": true},
+    {"method": "POST", "path": "/v1/data/cross-chain-compare", "priceUsdc": "0.040", "paid": true},
+    {"method": "POST", "path": "/v1/data/token-intel", "priceUsdc": "0.030", "paid": true},
+    {"method": "POST", "path": "/v1/data/market-snapshot", "priceUsdc": "0.070", "paid": true},
+    {"method": "POST", "path": "/v1/webhooks/whale-alerts", "priceUsdc": "0.100", "paid": true},
+    {"method": "POST", "path": "/v1/aggregate/balances", "priceUsdc": "0.004", "paid": true},
+    {"method": "POST", "path": "/v1/aggregate/nfts", "priceUsdc": "0.004", "paid": true},
+    {"method": "POST", "path": "/v1/aggregate/prices", "priceUsdc": "0.004", "paid": true},
+    {"method": "POST", "path": "/v1/aggregate/tx-history", "priceUsdc": "0.004", "paid": true}
+  ],
+  "tags": ["onchain", "intelligence", "token", "wallet", "risk", "whale", "balance", "transaction", "cross-chain", "mcp", "x402", "alchemy", "coingecko", "base", "usdc"]
+}
